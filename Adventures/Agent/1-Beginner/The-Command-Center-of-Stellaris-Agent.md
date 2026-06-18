@@ -1,7 +1,7 @@
 ## The Command Center of Stellaris - Custom Agent Chat Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/stellaris.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (2).png"  style="width: 1000px" />
 </a>
 
 ### Background

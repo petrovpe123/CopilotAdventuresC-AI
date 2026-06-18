@@ -1,7 +1,7 @@
 ## The Gridlock Arena of Mythos - Agent Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/mythos-arena-full.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (7).png"  style="width: 1000px" />
 </a>
 
 ### Background

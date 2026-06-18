@@ -1,7 +1,7 @@
 ## The Magical Forest of Algora - Agent Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/algora-forest.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (3).png"  style="width: 1000px" />
 </a>
 
 ### Background

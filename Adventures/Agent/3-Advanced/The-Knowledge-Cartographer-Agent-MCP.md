@@ -1,7 +1,7 @@
 # The Knowledge Cartographer - Agent Mode + MCP Adventure
 
 <a href="#">
-    <img src="../../../Images/knowledge-cartographer.jpg" style="width: 830px" />
+    <img src="../../../Images/Designer (9).png"  style="width: 1000px" />
 </a>
 
 ### Background

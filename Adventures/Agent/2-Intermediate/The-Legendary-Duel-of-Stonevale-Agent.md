@@ -1,7 +1,7 @@
 ## The Legendary Duel of Stonevale - Agent Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/stonevale.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (5).png"  style="width: 1000px" />
 </a>
 
 ### Background

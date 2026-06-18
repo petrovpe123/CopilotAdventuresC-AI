@@ -1,7 +1,7 @@
 ## The Scrolls of Eldoria - Agent Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/eldoria.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (6).png"  style="width: 1000px" />
 </a>
 
 ### Background

@@ -1,7 +1,7 @@
 ## The Clockwork Town of Tempora - Agent Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/tempora-clocks.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (1).png"  style="width: 1000px" />
 </a>
 
 ### Background

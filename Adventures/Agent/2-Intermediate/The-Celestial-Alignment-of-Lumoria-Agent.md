@@ -1,7 +1,7 @@
 ## The Celestial Alignment of Lumoria - Agent Mode Adventure
 
 <a href="#">
-    <img src="../../../Images/lumoria.jpg"  style="width: 830px" />
+    <img src="../../../Images/Designer (4).png"  style="width: 1000px" />
 </a>
 
 ### Background
