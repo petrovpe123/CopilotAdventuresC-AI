@@ -7,7 +7,7 @@ Benvenuto in Copilot Adventures! Questa serie di avventure di programmazione rig
 ## Scegli la tua avventura Copilot
 
 <a href="#">
-    <img src="./Images/choose-own-adventure.jpg" style="width: 830px" />
+    <img src="./Images/Adventure.png" style="width: 830px" />
 </a>
 
 ### 1. Entra nell'Arena dell'Avventura

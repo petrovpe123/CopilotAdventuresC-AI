@@ -7,7 +7,7 @@ Welcome to Copilot Adventures! This series of coding adventures is all about lea
 ## Choose Your Own Copilot Adventure
 
 <a href="#">
-    <img src="./Images/choose-own-adventure.jpg" style="width: 830px" />
+    <img src="./Images/Adventure.png" style="width: 830px" />
 </a>
 
 ### 1. Enter the Adventure Arena
