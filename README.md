@@ -21,6 +21,19 @@ Before picking an adventure, set up your working workspace:
 You are now ready to follow the adventure below and start coding! Please keep in mind to start a new instance of GitHub Copilot Chat everytime you begin a new adventure!
 
 ---
+### Find an Adventure Partner
+
+These adventures are even more rewarding when you tackle them alongside someone else. Before you begin, find a partner to pair up with for the journey. After each adventure, take a few minutes together to compare and discuss your experiences:
+
+- **Compare your results** - Did your solutions behave the same way? Where did they differ, and why?
+- **Discuss the model** - Which model did each of you use, and how did the model's choices affect the outcome?
+- **Talk about context** - How much context did you provide? Did the size of your context window or the files you attached change the quality of the results?
+- **Share your prompts** - Compare the prompts you each wrote. What phrasing worked well? What would you rephrase next time?
+- **Swap techniques** - Share any tips, custom instructions, or workflows that helped you get better results from GitHub Copilot.
+
+Reflecting together after every adventure will help you both learn faster and discover new ways to work effectively with AI.
+
+---
 ### 1. Enter the Adventure Arena
 
 *Experience autonomous AI agent development with comprehensive project creation*
@@ -41,6 +54,8 @@ Read Your Copilot Adventure description, the high-Level tasks to perform, and th
 
 - Use [GitHub Copilot](https://docs.github.com/en/copilot/get-started/quickstart) to help you write the code for the adventure. You can use any language you'd like. Try learning a new language if you're up for the challenge (more on that below)!
 - Leave any comments in your code to explain your thought process and show prompts that GitHub Copilot used to help you out.
+
+
 
 
 ## Next Steps: Learn a New Language or Create a UI for Your Adventure
