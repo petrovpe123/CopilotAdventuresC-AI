@@ -12,14 +12,6 @@ Deep within the enchanted Forest of Algora, two mystical creatures called the Lo
 
 Your task is to create a system that simulates the sacred dance between Lox and Faelis creatures. You'll need to determine the magical effects of their combined dance moves and track the state of the forest after each sequence of the dance.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode** - an autonomous AI assistant that can understand complex tasks and break them down into multiple steps, creating entire applications from scratch!
-
-### Prerequisites
-
-Before starting this adventure, you'll need to perform the following steps:
-
-1. **Install VS Code** - Download from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
 
 ### Learning Outcomes
 
@@ -63,7 +55,7 @@ Now let's define the requirements for the magical dance simulation so that you c
 In the Chat panel with "Agent" mode selected, provide a comprehensive prompt like:
 
 ```
-Create a complete magical dance simulation system for the Forest of Algora. The system should:
+Create a complete magical dance simulation system for the Forest of Algora. The system should firslty create a folder "Algora" and then inside of it:
 
 1. Create a console application in JavaScript (or your preferred language)
 2. Define two mystical creatures: Lox and Faelis with their predefined dance moves
@@ -80,6 +72,48 @@ Create a complete magical dance simulation system for the Forest of Algora. The 
 
 Please create the project structure, write the code, and test it.
 ```
+
+#### Step 1.2: Use GitHub Copilot CLI Fleet Mode
+
+For installing GitHub Copilot CLI: https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
+
+After Agent Mode finishes creating the project, navigate to the `Algora` folder that was created for this exercise. Open a terminal in that folder, run the `copilot` command to boot up GitHub Copilot CLI, and then paste the following prompt into GitHub Copilot CLI:
+
+
+
+```
+/fleet Enhance the completed Magical Forest of Algora project.
+
+Split the work into 3 parallel tasks:
+
+1. Expand the magical effect logic
+
+- Define effects for all missing move combinations
+- Keep the original rules for Twirl + Twirl, Leap + Spin, and Spin + Leap
+- Make sure forest state updates correctly after each sequence
+
+2. Improve the visual output
+
+- Add simple ASCII art or themed console output for the forest after each sequence
+- Keep the output readable and beginner-friendly
+- Do not change the core simulation rules
+
+3. Add tests and validation
+
+- Add tests for move combinations, sequence processing, and forest state updates
+- Validate that the dance still runs for 5 sequences
+- Check for invalid move handling if applicable
+
+Parent task:
+
+- Merge the results into one final version
+- Keep the project simple and easy to understand
+- Preserve the existing Algora story and output style
+```
+
+- The `/fleet` command is used 0when you want Copilot CLI to split one larger improvement request into smaller tasks that can run in parallel.
+- Use `/tasks` during or after the run to view and manage the tasks that Copilot created, including subagents and shell commands.
+- Type in a `/` to explore all commands possible in Copilot CLI
 
 #### Step 2: Watch Agent Mode Work
 
@@ -102,7 +136,7 @@ As Agent Mode works, you can:
 
 #### Step 4: Explore Advanced Features
 
-Once your basic system works, try asking Agent Mode to:
+Once your basic system works, switch back to Copilit Chat Agent Mode to enter the prompt:
 
 ```
 Enhance the magical dance system with these features:

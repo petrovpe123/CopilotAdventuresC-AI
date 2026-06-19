@@ -12,15 +12,6 @@ In the mechanical town of Tempora, everything operates on clockwork and precise 
 
 Your task is to create a system that checks all the clocks in the town and synchronizes them with the Grand Clock Tower. You'll be given a list of times from various clocks around the town, and you must determine how many minutes each clock is ahead or behind the Grand Clock Tower's time.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode** - an autonomous AI assistant that can understand complex tasks and break them down into multiple steps, creating entire applications from scratch!
-
-### Prerequisites
-
-Before starting this adventure, you'll need to perform the following steps:
-
-1. **Install VS Code** - Download from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
-
 ### Learning Outcomes
 
 By completing this adventure with Agent Mode, you'll learn:
@@ -74,7 +65,87 @@ Create a complete clock synchronization system for the town of Tempora. The syst
 Please create the project structure, write the code, and test it.
 ```
 
-#### Step 2: Watch Agent Mode Work
+
+
+#### Step 2: Extend the System with Your Own Custom Prompt
+
+Now that the basic system works, write your own custom prompt that lets the user pass in any new clock times they want. This makes the exercise reusable because the same prompt can be rerun with different time lists.
+
+Use this prompt in the Chat panel with "Agent" mode selected.
+
+```
+Extend the existing Tempora clock synchronization system by adding any new clock times I provide.
+
+When adding new clocks, do not replace the original 4 clocks. Keep the original data, append the new clocks to the list in the order I provide them, and rerun the full analysis for every clock.
+
+New clocks to add:
+- 14:06
+- 14:55
+
+Requirements:
+1. Keep the original 4 clocks and append the new clocks I provide
+2. Recalculate the minute difference for every clock against the Grand Clock Tower time of 15:00
+3. Calculate how many minutes each clock is ahead or behind the Grand Clock Tower
+4. Display the results clearly, showing positive values for clocks ahead and negative for clocks behind
+5. Keep everything in a single file
+```
+
+For example, if you add `14:06` and `14:55`, those should be treated as extra town clocks, included in the same output table, and counted in the final summary.
+
+#### Step 2.1: Create a Reusable Prompt File for This Extension
+
+Save your extended prompt as a reusable file in a new folder `.github/prompts/` so you or anyone else can rerun it with different time lists:
+
+1. Create `.github/prompts/tempora-extend.prompt.md`
+2. Add this content:
+
+```markdown
+---
+agent: agent
+description: Extend the Tempora clock synchronization system with extra clocks
+argument-hint: Provide one or more clock times separated by commas
+---
+
+# Extend the Tempora Clock System
+
+Your goal is to extend the existing Tempora clock synchronization system with the extra clock times provided by the user.
+
+## Step 1: Read the New Clock Times
+
+Read the extra clock times from: `$ARGUMENTS`
+
+Treat `$ARGUMENTS` as a comma-separated list of new town clocks, for example:
+- `14:06, 14:55`
+- `13:30, 15:45, 16:10`
+
+## Step 2: Update the Clock List
+
+1. Do not remove or replace the original clocks
+2. Append the extra clock times from `$ARGUMENTS` in the order provided
+
+## Step 3: Recalculate the Analysis
+
+1. Use Grand Clock Tower time
+2. Calculate minute differences for all clocks after the new ones are added
+3. For each clock, identify whether it is ahead, behind, or synchronized
+4. Print results as a table with columns: `Clock`, `Time`, `Difference`, `Status`
+5. End with a summary showing the updated totals for clocks ahead, behind, and synchronized
+6. Keep everything in a single file
+
+## Step 4: Validate the Input
+
+If any value in `$ARGUMENTS` is not a valid 24-hour time in `HH:MM` format, report it clearly and skip that invalid entry
+```
+
+3. Run it from Copilot Chat like this:
+
+```
+/tempora-extend 10:06, 18:55
+```
+
+Rerun the same prompt with an invalid list of times, for example `/tempora-extend 13:399, 15:465, 16:10`. Anaylze the way the agent behaves. 
+
+#### Step 3: Watch Agent Mode Work
 
 Agent Mode will autonomously:
 - 🔍 **Analyze** your workspace and determine what files to create
@@ -85,7 +156,7 @@ Agent Mode will autonomously:
 
 You'll see each step in the UI, showing every tool invocation.
 
-#### Step 3: Interact and Refine
+#### Step 4: Interact and Refine
 
 As Agent Mode works, you can:
 - **Approve or modify** proposed changes
@@ -93,7 +164,7 @@ As Agent Mode works, you can:
 - **Request explanations**: "Explain how the time calculation works"
 - **Add features**: "Add the ability to input custom clock times"
 
-#### Step 4: Explore Advanced Features
+#### Step 5: Explore Advanced Features
 
 Once your basic system works, try asking Agent Mode to:
 
@@ -107,7 +178,7 @@ Enhance the clock system with these features:
 
 ### Expected Output Example
 
-When your Agent Mode implementation is complete, running the application should produce output similar to the following. AI is non-deterministic, so your results may vary slightly, but the structure should be similar.
+When your Agent Mode implementation is complete, running the application should produce output similar to the following. For the repeatable prompt above, the calculated differences and PASS/FAIL validation should match exactly on each run.
 
 ```
 🕐 Tempora Clock Synchronization System 🕐
@@ -173,7 +244,6 @@ Summary: 3 clocks need adjustment
 
 **Tool Confirmation & Limits:**
 - Agent Mode requires your confirmation before invoking tools or running commands
-- Maximum of 128 tools can be used per request
 - You can interrupt or pause requests at any time
 - Always review suggested edits before accepting
 

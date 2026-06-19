@@ -4,6 +4,23 @@
     <img src="./Images/Adventure.png" style="width: 830px" />
 </a>
 
+### Getting Started
+
+Before picking an adventure, set up your working workspace:
+
+1. Create a new empty folder on your machine and open it in VS Code
+2. Inside that folder, create the following .github folder:
+
+        your-workspace/
+
+            └── .github/
+        
+
+3. This is where GitHub Copilot will create your solution files and where you will save your reusable .md files
+
+You are now ready to follow the adventure below and start coding! Please keep in mind to start a new instance of GitHub Copilot Chat everytime you begin a new adventure!
+
+---
 ### 1. Enter the Adventure Arena
 
 *Experience autonomous AI agent development with comprehensive project creation*
