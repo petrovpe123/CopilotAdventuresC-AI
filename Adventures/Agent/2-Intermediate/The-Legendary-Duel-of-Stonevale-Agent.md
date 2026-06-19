@@ -12,14 +12,7 @@ In the mystical realm of Stonevale, two warriors, Rok and Papyra, are chosen for
 
 Your task is to create a system that simulates the legendary duel between Rok and Papyra. You'll need to implement the scoring system, track each warrior's moves over multiple rounds, and determine the winner of this fate-determining battle.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode** - an autonomous AI assistant that can understand complex tasks and break them down into multiple steps, creating entire applications from scratch!
 
-### Prerequisites
-
-Before starting this adventure, you'll need to perform the following steps:
-
-1. **Install VS Code** - Download from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
 
 ### Learning Outcomes
 

@@ -12,14 +12,7 @@ In the mystical land of Mythos, creatures from various realms come together to b
 
 Your task is to create a comprehensive battle simulation system for the Gridlock Arena. You'll need to implement grid-based movement, turn-based combat, collision detection, and a scoring system that tracks each creature's performance throughout the battle.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode** - an autonomous AI assistant that can understand complex tasks and break them down into multiple steps, creating entire applications from scratch!
 
-### Prerequisites
-
-Before starting this adventure, you'll need to perform the following steps:
-
-1. **Install VS Code** - Download from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
 
 ### Learning Outcomes
 

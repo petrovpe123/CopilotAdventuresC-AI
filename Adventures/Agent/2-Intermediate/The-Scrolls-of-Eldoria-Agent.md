@@ -12,14 +12,6 @@ In the enchanted land of Eldoria, ancient scrolls containing the secrets of the 
 
 Your task is to create a system that retrieves a digitized scroll from the Eldorian Web of Knowledge and deciphers it by filtering out the Elders' misleading information. As a young sorcerer's apprentice, you must extract the true secrets hidden within the scroll using pattern recognition and reveal the ancient wisdom.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode** - an autonomous AI assistant that can understand complex tasks and break them down into multiple steps, creating entire applications from scratch!
-
-### Prerequisites
-
-Before starting this adventure, you'll need to perform the following steps:
-
-1. **Install VS Code** - Download from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
 
 ### Learning Outcomes
 

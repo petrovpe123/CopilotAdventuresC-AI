@@ -14,15 +14,11 @@ The Great Library's Council has tasked you with building the Omniscient Codex - 
 
 Your mission is to create a comprehensive knowledge discovery and mapping system that combines the power of web exploration with intelligent local knowledge organization. You'll build an autonomous research assistant that can gather information from multiple sources, identify relationships between concepts, and create a navigable knowledge graph.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode with MCP (Model Control Protocol) tools** - extending AI capabilities with external tools for web search and file system operations!
-
 ### Prerequisites
 
 Before starting this adventure, you'll need to perform the following steps:
 
-1. **Install VS Code** - Download the latest version from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
-3. **Configure MCP Servers** - Set up Model Context Protocol servers for extended capabilities:
+1. **Configure MCP Servers** - Set up Model Context Protocol servers for extended capabilities:
    - **Web Search MCP Server** - For discovering knowledge across the web. Install the `MCP FireCrawl` server for advanced web scraping from the [MCP gallery](https://code.visualstudio.com/mcp).
    - **File System MCP Server** - For organizing and storing knowledge locally. Install the `MCP File System` server for managing files and directories.
 

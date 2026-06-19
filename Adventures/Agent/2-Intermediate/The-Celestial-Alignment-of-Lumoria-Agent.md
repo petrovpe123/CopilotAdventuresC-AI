@@ -12,14 +12,6 @@ In the vast expanse of the Galaxia Nebulae, a rare phenomenon is about to occur 
 
 Your task is to create a system that calculates the intensity of light each planet receives during this celestial alignment. Given the distances and relative positions of planets, you must determine which planets experience decreased light intensity due to other planets casting shadows on them.
 
-**In this adventure, you'll learn to use GitHub Copilot Agent Mode** - an autonomous AI assistant that can understand complex tasks and break them down into multiple steps, creating entire applications from scratch!
-
-### Prerequisites
-
-Before starting this adventure, you'll need to perform the following steps:
-
-1. **Install VS Code** - Download from [VS Code](https://code.visualstudio.com/).
-2. **Set up GitHub Copilot in VS Code** - Follow the instructions at [Set up GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/setup).
 
 ### Learning Outcomes
 
@@ -68,7 +60,7 @@ Now let's define the requirements for the celestial light calculation system so 
 In the Chat panel with "Agent" mode selected, provide a comprehensive prompt like:
 
 ```
-Create a complete celestial light intensity calculation system for the Lumoria star system. The system should:
+Create a complete celestial light intensity calculation system for the Lumoria star system. Before starting with coding, create a folder "Lumoria" and then put all files inside. The calculation system should:
 
 1. Create a console application in JavaScript (or your preferred language)
 2. Define the planetary data with distances and sizes:
@@ -87,6 +79,52 @@ Create a complete celestial light intensity calculation system for the Lumoria s
 
 Please create the project structure, write the code, and test it.
 ```
+
+#### Step 1.2: Add a Lumoria-Specific Custom Instructions File
+
+Once the first version is working, create a path-specific GitHub Copilot instructions file at `.github/instructions/lumoria.instructions.md`.
+
+Because of the `applyTo: "Lumoria/*"` frontmatter, these rules are attached automatically every time Copilot works on a file inside the `Lumoria` folder. That means you don't have to restate them in each prompt — Copilot treats them as standing guardrails for this exercise. Good rules describe **how** Copilot should behave (what to protect, what to keep simple, when to ask).
+
+Add the following instructions to the `lumoria.instructions.md` file:
+
+```
+---
+applyTo: "Lumoria/*"
+---
+
+# Lumoria Working Rules
+
+- Preserve the original Lumoria planets and values: Mercuria, Venusia, Earthia, and Marsia should remain the default dataset unless the user explicitly asks to change them.
+- Do not silently change the shadow rules. If new behavior is added, keep the original `Full`, `Partial`, `None`, and `None (Multiple Shadows)` logic intact.
+- Treat the shadow rules as the source of truth: always sort planets by distance from the Lumorian Sun before evaluating which nearer planets can cast a shadow.
+- Keep the light-calculation logic separate from the display logic so the algorithm is easy to test and explain.
+- Prefer small, single-purpose functions for sorting planets, evaluating shadows, and generating reports, and use clear celestial-themed names.
+- Whenever Copilot adds or changes output, include a short explanation for why each planet received its final light intensity.
+- Keep the output deterministic and beginner-friendly so the same default Lumoria scenario always produces the same, easy-to-verify result.
+- Add or update tests whenever the shadow logic changes, especially for equal-size planets, one blocking planet, and multiple blocking planets.
+- Validate planetary input (distance and size) and handle bad or missing data gracefully instead of crashing.
+- Avoid unnecessary frameworks, heavy abstractions, or external dependencies unless the user explicitly asks for them.
+- Make focused changes: edit only what the current request needs and leave unrelated, working Lumoria code untouched.
+- If a design choice is uncertain, Copilot should preserve the current Lumoria behavior and make the smallest safe improvement instead of rewriting the solution.
+```
+
+Each rule has a purpose:
+
+- **Protect the scenario** — the dataset, shadow rules, and sorting order are the heart of the puzzle, so Copilot must not quietly change them.
+- **Keep it understandable** — separating calculation from display, using small functions, and validating input keeps the project easy to read and test as it grows.
+- **Stay predictable** — deterministic output, per-planet explanations, and updated tests make every change easy to verify against the expected results.
+- **Change with care** — focused edits and "smallest safe improvement" prevent Copilot from rewriting working code when it is unsure.
+
+After saving the file, ask Agent Mode to continue the project. Because the rules apply automatically to the `Lumoria` folder, Copilot will follow them on every edit without you repeating them.
+
+For example, try this prompt in Agent Mode:
+
+```
+Refactor the Lumoria project so the light-intensity calculation is in its own function, separate from the display code. Add unit tests covering equal-size planets, one blocking planet, and multiple blocking planets. Keep the existing planets and shadow rules unchanged.
+```
+
+Notice that you did not have to restate the dataset, the shadow rules, or the "keep it deterministic" requirement — Copilot picks those up from `lumoria.instructions.md` automatically. Watch how it preserves Mercuria, Venusia, Earthia, and Marsia, keeps the `Full`/`Partial`/`None`/`None (Multiple Shadows)` logic intact, and makes a focused change instead of rewriting the whole solution.
 
 #### Step 2: Watch Agent Mode Work
 

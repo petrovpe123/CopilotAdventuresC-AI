@@ -52,7 +52,7 @@ Now let's define the requirements for the clock synchronization system so that y
 In the Chat panel with "Agent" mode selected, provide a comprehensive prompt like:
 
 ```
-Create a complete clock synchronization system for the town of Tempora. The system should:
+Create a complete clock synchronization system for the town of Tempora. The system should firstly create a folder "Tempora" and then inside:
 
 1. Create a console application in JavaScript (or your preferred language)
 2. Define the Grand Clock Tower time as 15:00
